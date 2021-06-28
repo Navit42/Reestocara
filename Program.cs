@@ -16,7 +16,13 @@ namespace Reestocara
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Main());
         }
+    }
+
+    static class Constants
+    {
+        public static readonly int alturaMaxima = Screen.PrimaryScreen.Bounds.Height;
+        public static readonly int larguraMaxima = Screen.PrimaryScreen.Bounds.Width;
     }
 }
