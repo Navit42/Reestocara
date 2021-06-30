@@ -52,28 +52,10 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModalCadastroItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModalCadastroItem.Designer.cs">
-      <DependentUpon>ModalCadastroItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModalVenderItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModalVenderItem.Designer.cs">
-      <DependentUpon>ModalVenderItem.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModalCadastroItem.resx">
-      <DependentUpon>ModalCadastroItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModalVenderItem.resx">
-      <DependentUpon>ModalVenderItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
