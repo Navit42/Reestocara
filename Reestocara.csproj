@@ -52,6 +52,36 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModalBalanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalBalanco.Designer.cs">
+      <DependentUpon>ModalBalanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalCadastroCliente.Designer.cs">
+      <DependentUpon>ModalCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalCadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalCadastroFuncionario.Designer.cs">
+      <DependentUpon>ModalCadastroFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalCadastroItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalCadastroItem.Designer.cs">
+      <DependentUpon>ModalCadastroItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalVenderItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalVenderItem.Designer.cs">
+      <DependentUpon>ModalVenderItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
