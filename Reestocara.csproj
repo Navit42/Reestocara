@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,30 +47,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sql.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModalBalanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalBalanco.Designer.cs">
+      <DependentUpon>ModalBalanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalCadastroCliente.Designer.cs">
+      <DependentUpon>ModalCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalCadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalCadastroFuncionario.Designer.cs">
+      <DependentUpon>ModalCadastroFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalCadastroItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalCadastroItem.Designer.cs">
+      <DependentUpon>ModalCadastroItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalVenderItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalVenderItem.Designer.cs">
+      <DependentUpon>ModalVenderItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModalBalanco.resx">
+      <DependentUpon>ModalBalanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalCadastroItem.resx">
+      <DependentUpon>ModalCadastroItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalVenderItem.resx">
+      <DependentUpon>ModalVenderItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -78,6 +120,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\btn-cad-true.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\btn-cad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pnl-modal-bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

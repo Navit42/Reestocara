@@ -73,15 +73,17 @@ namespace Reestocara
 
         private void btnVenderItem_Click(object sender, EventArgs e)
         {
-           
+            ModalVenderItem modal = new ModalVenderItem();
+            modal.Show();
             
         
         }
 
         private  void btnCadastrarItem_Click(object sender, EventArgs e)
         {
+            ModalCadastroItem modal = new ModalCadastroItem();
+            modal.Show();
 
-            
         }
     }
 }
