@@ -29,7 +29,7 @@ namespace Reestocara
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "010233",
             "Camisa Polo gola alta",
             "Polo gola alta",
@@ -71,36 +71,36 @@ namespace Reestocara
             // 
             // btnBalanco
             // 
-            this.btnBalanco.Location = new System.Drawing.Point(26, 217);
+            this.btnBalanco.Location = new System.Drawing.Point(0, 217);
             this.btnBalanco.Name = "btnBalanco";
-            this.btnBalanco.Size = new System.Drawing.Size(75, 23);
+            this.btnBalanco.Size = new System.Drawing.Size(208, 23);
             this.btnBalanco.TabIndex = 5;
             this.btnBalanco.Text = "Balanço";
             this.btnBalanco.UseVisualStyleBackColor = true;
             // 
             // btnCadastrarCliente
             // 
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(26, 179);
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(0, 179);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(208, 23);
             this.btnCadastrarCliente.TabIndex = 4;
             this.btnCadastrarCliente.Text = "Cadastrar Cliente";
             this.btnCadastrarCliente.UseVisualStyleBackColor = true;
             // 
             // btnCadastrarFuncionario
             // 
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(26, 139);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(0, 139);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
-            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(208, 23);
             this.btnCadastrarFuncionario.TabIndex = 3;
             this.btnCadastrarFuncionario.Text = "Cadastrar Funcionario";
             this.btnCadastrarFuncionario.UseVisualStyleBackColor = true;
             // 
             // btnCadastrarItem
             // 
-            this.btnCadastrarItem.Location = new System.Drawing.Point(26, 100);
+            this.btnCadastrarItem.Location = new System.Drawing.Point(0, 100);
             this.btnCadastrarItem.Name = "btnCadastrarItem";
-            this.btnCadastrarItem.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrarItem.Size = new System.Drawing.Size(208, 23);
             this.btnCadastrarItem.TabIndex = 2;
             this.btnCadastrarItem.Text = "Cadastrar Item";
             this.btnCadastrarItem.UseVisualStyleBackColor = true;
@@ -108,9 +108,9 @@ namespace Reestocara
             // 
             // btnVenderItem
             // 
-            this.btnVenderItem.Location = new System.Drawing.Point(26, 59);
+            this.btnVenderItem.Location = new System.Drawing.Point(0, 59);
             this.btnVenderItem.Name = "btnVenderItem";
-            this.btnVenderItem.Size = new System.Drawing.Size(75, 23);
+            this.btnVenderItem.Size = new System.Drawing.Size(211, 23);
             this.btnVenderItem.TabIndex = 1;
             this.btnVenderItem.Text = "Vender Item";
             this.btnVenderItem.UseVisualStyleBackColor = true;
@@ -136,9 +136,9 @@ namespace Reestocara
             this.clValorCompra,
             this.clValorVenda});
             this.listItensEmEstoque.HideSelection = false;
-            listViewItem3.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
             this.listItensEmEstoque.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem1});
             this.listItensEmEstoque.Location = new System.Drawing.Point(3, 0);
             this.listItensEmEstoque.Name = "listItensEmEstoque";
             this.listItensEmEstoque.Size = new System.Drawing.Size(576, 444);
