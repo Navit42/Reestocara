@@ -45,13 +45,6 @@ namespace Reestocara
             this.btnVenderItem = new System.Windows.Forms.Button();
             this.pnlExibicao = new System.Windows.Forms.Panel();
             this.listItensEmEstoque = new System.Windows.Forms.ListView();
-            this.clItemId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clTipoItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clTamanhoItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clUnidadeItens = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clValorCompra = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clValorVenda = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlMenu.SuspendLayout();
             this.pnlExibicao.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +70,7 @@ namespace Reestocara
             this.btnBalanco.TabIndex = 5;
             this.btnBalanco.Text = "Balanço";
             this.btnBalanco.UseVisualStyleBackColor = true;
+            this.btnBalanco.Click += new System.EventHandler(this.BtnBalanco_Click);
             // 
             // btnCadastrarCliente
             // 
@@ -104,7 +98,7 @@ namespace Reestocara
             this.btnCadastrarItem.TabIndex = 2;
             this.btnCadastrarItem.Text = "Cadastrar Item";
             this.btnCadastrarItem.UseVisualStyleBackColor = true;
-            this.btnCadastrarItem.Click += new System.EventHandler(this.btnCadastrarItem_Click);
+            this.btnCadastrarItem.Click += new System.EventHandler(this.BtnCadastrarItem_Click);
             // 
             // btnVenderItem
             // 
@@ -114,7 +108,7 @@ namespace Reestocara
             this.btnVenderItem.TabIndex = 1;
             this.btnVenderItem.Text = "Vender Item";
             this.btnVenderItem.UseVisualStyleBackColor = true;
-            this.btnVenderItem.Click += new System.EventHandler(this.btnVenderItem_Click);
+            this.btnVenderItem.Click += new System.EventHandler(this.BtnVenderItem_Click);
             // 
             // pnlExibicao
             // 
@@ -127,14 +121,6 @@ namespace Reestocara
             // 
             // listItensEmEstoque
             // 
-            this.listItensEmEstoque.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clItemId,
-            this.clItemName,
-            this.clTipoItem,
-            this.clTamanhoItem,
-            this.clUnidadeItens,
-            this.clValorCompra,
-            this.clValorVenda});
             this.listItensEmEstoque.HideSelection = false;
             listViewItem1.StateImageIndex = 0;
             this.listItensEmEstoque.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
@@ -145,37 +131,6 @@ namespace Reestocara
             this.listItensEmEstoque.TabIndex = 0;
             this.listItensEmEstoque.UseCompatibleStateImageBehavior = false;
             this.listItensEmEstoque.View = System.Windows.Forms.View.Details;
-            // 
-            // clItemId
-            // 
-            this.clItemId.Text = "Numero do item";
-            this.clItemId.Width = 107;
-            // 
-            // clItemName
-            // 
-            this.clItemName.Text = "Nome do Item";
-            this.clItemName.Width = 106;
-            // 
-            // clTipoItem
-            // 
-            this.clTipoItem.Text = "tipoItem";
-            this.clTipoItem.Width = 62;
-            // 
-            // clTamanhoItem
-            // 
-            this.clTamanhoItem.Text = "Tamanho do item";
-            // 
-            // clUnidadeItens
-            // 
-            this.clUnidadeItens.Text = "Unidades";
-            // 
-            // clValorCompra
-            // 
-            this.clValorCompra.Text = "Valor quando comprado";
-            // 
-            // clValorVenda
-            // 
-            this.clValorVenda.Text = "Valor da Venda";
             // 
             // Main
             // 
@@ -205,13 +160,6 @@ namespace Reestocara
         private System.Windows.Forms.Button btnCadastrarItem;
         private System.Windows.Forms.Button btnVenderItem;
         private System.Windows.Forms.ListView listItensEmEstoque;
-        private System.Windows.Forms.ColumnHeader clItemId;
-        private System.Windows.Forms.ColumnHeader clItemName;
-        private System.Windows.Forms.ColumnHeader clTipoItem;
-        private System.Windows.Forms.ColumnHeader clTamanhoItem;
-        private System.Windows.Forms.ColumnHeader clUnidadeItens;
-        private System.Windows.Forms.ColumnHeader clValorCompra;
-        private System.Windows.Forms.ColumnHeader clValorVenda;
     }
 }
 
