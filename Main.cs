@@ -7,16 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace Reestocara
 {
     public partial class Main : Form
-    {  
+    {
+
+        Sql sql = new Sql();
+        public string connString;
+
+
         public Main()
         {
+            connString = sql.CreateConnString("reestocara", "localhost", "root", "toor");
             InitializeComponent();
             PositioningComponents();
-          
+            ListViewHandler();
+            AtualizaLista();
 
         }
 
@@ -71,19 +80,61 @@ namespace Reestocara
             listItensEmEstoque.Left = 0;
         }
 
-        private void btnVenderItem_Click(object sender, EventArgs e)
+        private void ListViewHandler()
         {
-            ModalVenderItem modal = new ModalVenderItem();
-            modal.Show();
-            
-        
+            listItensEmEstoque.GridLines = true;
+            listItensEmEstoque.FullRowSelect = true;
+            listItensEmEstoque.Columns.Add("Código de Barras", -2, HorizontalAlignment.Left);
+            listItensEmEstoque.Columns.Add("Nome do Item", -2, HorizontalAlignment.Left);
+            listItensEmEstoque.Columns.Add("Marca", -2, HorizontalAlignment.Left);
+            listItensEmEstoque.Columns.Add("Preço de compra", -2, HorizontalAlignment.Left);
+            listItensEmEstoque.Columns.Add("Preço de venda", -2, HorizontalAlignment.Left);
+            listItensEmEstoque.Columns.Add("Quantia em estoque", -2, HorizontalAlignment.Left);
+            listItensEmEstoque.Columns.Add("Descrição", -2, HorizontalAlignment.Left);
+            listItensEmEstoque.Columns.Add("Categoria", -2, HorizontalAlignment.Left);
+            listItensEmEstoque.Columns.Add("Quem cadastrou", -2, HorizontalAlignment.Left);
+            listItensEmEstoque.Columns.Add("Quem vendeu", -2, HorizontalAlignment.Left);
+
         }
 
-        private  void btnCadastrarItem_Click(object sender, EventArgs e)
+        public void AtualizaLista()
         {
-            ModalCadastroItem modal = new ModalCadastroItem();
-            modal.Show();
 
+            listItensEmEstoque.Items.Clear();
+            MySqlDataReader result;
+            result = sql.ReadableConnect(connString, "Select * From item");
+            List<ListViewItem> itens = new List<ListViewItem>();
+            int count = 0;
+
+                while (result.Read())
+                {
+                    itens.Add(new ListViewItem(result.GetValue(1).ToString()));
+                    for (int i = 2; i < 11; i++)
+                    {
+                        itens[count].SubItems.Add(result.GetValue(i).ToString());
+                    }
+                    listItensEmEstoque.Items.Add(itens[count]);
+                    count++;
+                }
+            sql.Close();
+        }
+        private void BtnVenderItem_Click(object sender, EventArgs e)
+        {
+            ModalVenderItem VendaItem = new ModalVenderItem();
+            VendaItem.Show();
+        }
+
+        private void BtnCadastrarItem_Click(object sender, EventArgs e)
+        {
+            ModalCadastroItem CadItem = new ModalCadastroItem();
+            CadItem.Show();
+        }
+
+        private void BtnBalanco_Click(object sender, EventArgs e)
+        {
+            ModalBalanco Balanco = new ModalBalanco();
+            Balanco.Show();
         }
     }
+    
 }
